@@ -1,0 +1,49 @@
+<html>
+    <script src="js/templates.js"></script>
+    <script src="js/backend.js"></script>
+    <script src="js/dataBack.js"></script>
+    <head>
+        <!-- App stylesheets -->
+        <link rel="stylesheet" href="css/mystyle.css">
+
+        <!-- Fa fa stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- Hello! -->
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+            // Driver code
+            window.onload = function () {
+                // elm = document.createElement('div');
+                // elm.id = 'elm';
+                // document.body.appendChild(elm);
+                // run_app('elm', document.body);
+                populateDB(data(), "groceries2");
+                var divElement = frameTable();
+                divElement.id = 'root';
+                document.body.appendChild(divElement);
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("ActiveButton").click();
+                run_app('home1','Search');
+                grocery_app('grocery1','Active');
+                // console.log(data());
+
+
+                // console.log('outside ' + typeof elm);
+            }
+        </script>
+
+    </body>
+</html>

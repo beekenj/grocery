@@ -1,0 +1,134 @@
+<html>
+    <!-- <script src="js/templates.js"></script> -->
+    <head>
+        <!-- App stylesheets -->
+        <link rel="stylesheet" href="css/mystyle.css">
+
+        <!-- Fa fa stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- Hello! -->
+    </head>
+
+    <style>
+        input.largerCheckbox {
+            /*position: absolute;
+            top: 0;
+            left: 100;*/
+            width: 25px;
+            height: 25px;
+            background-color: #eee;
+        }
+        td {
+            font-size: 25px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        body {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+    </style>
+
+    <body>
+
+        <script type="text/javascript">
+
+
+            /**
+             * Creates a DOM object for a checklist item
+             * @param   {String}        item            The listed item
+             * @param   {Function}      clickFunc       Function to call for checkbox click
+             * @param   {Function}      menuFunc        Function to call for menu click
+             * @return  {DOM Object}    tabElement      The root node for the checklist item
+            */
+            function checkPrint (item, clickFunc, menuFunc, location=null) {
+
+                // create a table and set style
+                var tabElement = document.createElement('table');
+                tabElement.style.width = '100%'
+                // this.appendChild(tabElement);
+
+                // add a checkbox
+                var checkElement = document.createElement('input');
+                checkElement.setAttribute('class', 'largerCheckbox');
+                checkElement.type = 'checkbox';
+                // checkbox click event
+                checkElement.addEventListener('click', function(){
+                    if (clickFunc && (typeof clickFunc == "function")) {
+                        clickFunc();
+                    }
+                });
+
+                // create checkbox cell
+                var tdElement = document.createElement('td');
+                tabElement.appendChild(tdElement);
+                tdElement.style.width = '30px';
+                tdElement.style.padding = '5px';
+                tdElement.appendChild(checkElement);
+
+                // create text cell
+                var tdElement = document.createElement('td');
+                tdElement.style.width = '60%';
+                tdElement.align = 'left';
+                tdElement.innerHTML = item;
+                tabElement.appendChild(tdElement);
+
+                var tdElement = document.createElement('td');
+                tdElement.align = 'right';
+                if (location) tdElement.innerHTML = location;
+                tabElement.appendChild(tdElement);
+
+                // create menu cell
+                var tdElement = document.createElement('td');
+                tdElement.align = 'right';
+                tabElement.appendChild(tdElement);
+
+                // create menu element
+                var menuElement = document.createElement('a');
+                menuElement.style.color = 'black';
+                menuElement.innerHTML = '<i class="fa fa-ellipsis-v" aria-hidden="true"></i>';
+                // menu click event
+                menuElement.addEventListener('click', function(){
+                    menuFunc();
+                })
+                tdElement.appendChild(menuElement);
+
+                return tabElement;
+            }
+
+            window.onload = function () {
+                document.body.appendChild(checkPrint('hi',
+                    clickFunc = function () {
+                        console.log('this way!');
+                    },
+                    menuFunc = function () {
+                        console.log('menu clicked');
+                    },
+                    location = '1'
+                ));
+                document.body.appendChild(checkPrint('there',
+                    clickFunc = function () {
+                        console.log('this way!');
+                    },
+                    menuFunc = function () {
+                        console.log('menu clicked');
+                    }
+                ));
+                // checkPrint('there', console.log, 2, 2);
+            }
+            // checkPrint('huh', console.log, 'hi ', 'click');
+        </script>
+
+    </body>
+</html>

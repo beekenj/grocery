@@ -1,0 +1,142 @@
+input.largerCheckbox {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+}
+td {
+  padding-left: 10px;
+}
+
+.listItem {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.listPrint {
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+/*top bar stuff*/
+.top {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #2f2e5c;
+  font-size: 30px;
+  color: #ffffff;
+  border: none;  
+}
+
+.top button {
+  background-color: inherit;
+  /*font-color: #ffffff;*/
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+}
+
+.top button:hover {
+  background-color: #0c004a;
+}
+
+/* Create an active/current tablink class */
+.top button.active {
+  background-color: #1b1a36;
+}
+
+
+
+
+/*tab suff*/
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  font-size: 30px;
+  border: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /*padding: 20px 16px;*/
+  padding: 14px 20px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  animation: fadeEffect .5s; /* Fading effect takes 1/2 second */
+}
+
+/* Style the filter content */
+.topcontent {
+  display: none;
+  padding: 6px 12px;
+  /*border: 1px solid #ccc;*/
+  border-top: none;
+  animation: fadeEffect .5s; /* Fading effect takes 1/2 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+.custom-select {
+  position: fixed;
+  background-color: #1b1a36;
+  width: 175px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  height: 50px;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  margin-left: 10px;
+  right: 0;
+  /*left: 90px;*/
+  top: 0;
+}
+
+.search input[type=text] {
+  width: 100%;
+  float: left;
+  /*top: 0;*/
+  padding: 6px 0px;
+  margin: 5px 5px;
+  /*box-sizing: border-box;*/
+}
+
+.search button {
+  border-radius: 10px;
+  background-color: #00ddff;
+  padding: 9px 10px;
+  margin: 5px 0px;
+}

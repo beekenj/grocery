@@ -1,0 +1,800 @@
+<html>
+    <script src="js/templates.js"></script>
+    <script src="js/backend.js"></script>
+    <script src="js/dataBack.js"></script>
+    <head>
+        <!-- App stylesheets -->
+        <link rel="stylesheet" href="css/mystyle.css">
+
+        <!-- Fa fa stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- Hello! -->
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            const itemData = [
+                {
+                    "name": "Hot peppers ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Grapefruit juice ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Sriracha ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Garlic ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Bagals",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tortellini",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Sausage",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Cream cheese ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tiger balm",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Coffee ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Franks",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Butter",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Mints ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Simply Juice ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Fresh Dill",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Fresh Thyme",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Greek Yogurt ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Potato chips ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Claritin ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tums",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Salmon ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Onion ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Cucumber ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Zucchini ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Mushrooms ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Lemon ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Metamucil ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Corn meal",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Yeast",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Flour ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Cheese",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Pepperoni ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Chicken nuggets ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tooth picks",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Toothbrush ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Ground Beef",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "KY",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Protein Bars",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Frozen Pizza ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Limeade ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tobasco",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tortillas ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Marjoram ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Chili paste",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Cumin",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Mustard",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Ice trays",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Razor",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Whey",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Foil",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Kale",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Shaving cream ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Olive oil ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Pizza ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Pasta",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Lotion ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Taco shells ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Humus ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Peppers",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Lettuce ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Broccoli ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Propane ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Pretzels ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Cereal ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Milk",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Oregano ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Hand soap ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Floss",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tomato sauce ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Mac & Cheese ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Corn chips ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Bandaids",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Ibuprofen ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Sunflower seeds",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Med tape",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Beef",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "OJ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Olives",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Honey ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Amino acid",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Creatine ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Carrots ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Cilantro ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tupperware ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Soy sauce ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Onion powder ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Baking soda ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Patches",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Green Onion",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Yogurt ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Soup",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tomatoes ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Rice & Beans",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Sponges ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Trash bags",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Lasagna ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Chicken ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Rosemary ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Body soap",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Basil ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Pickles",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Breakfast Sausage ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Q-Tips",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Toothpaste ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Coriander ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Skewers",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Mustard supplies ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Garlic powder ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Ramen",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Banana peppers ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Bleach ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Crushed red pepper ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Bananas",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Spanish rice ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Jars",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Potatoes ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Green chili ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Peppers",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Oxiclean",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Veggie burgers",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "B&B packet ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Refried Beans",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Rice vinegar ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Pork chops ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Salad dressing ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Chicken broth",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Salsa",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Strawberries ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Olive blend",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Dish brush ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Buns",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Rolls ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Oatmeal ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Brats",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Sugar",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Bags",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Italian bread ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Craisons ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Tupperware ",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Greens",
+                    "listed": 0,
+                    "home_section": ""
+                },
+                {
+                    "name": "Lime",
+                    "listed": 0,
+                    "home_section": ""
+                }
+            ]
+
+            // Driver code
+            window.onload = function () {
+                const dbName = "test_2";
+
+                var request = indexedDB.open(dbName, 3);
+
+                request.onerror = event => {
+                  // Handle errors.
+                };
+                request.onupgradeneeded = event => {
+                  var db = event.target.result;
+
+                  // Create an objectStore to hold information about our customers. We're
+                  // going to use "ssn" as our key path because it's guaranteed to be
+                  // unique - or at least that's what I was told during the kickoff meeting.
+                  var objectStore = db.createObjectStore("groc3", { autoIncrement : true });
+
+                  // Create an index to search customers by name. We may have duplicates
+                  // so we can't use a unique index.
+                  objectStore.createIndex("name", "name", { unique: false });
+
+                  // Create an index to search customers by email. We want to ensure that
+                  // no two customers have the same email, so use a unique index.
+                  // objectStore.createIndex("listed", "listed", { unique: true });
+
+                  // Use transaction oncomplete to make sure the objectStore creation is
+                  // finished before adding data into it.
+                  objectStore.transaction.oncomplete = event => {
+                    // Store values in the newly created objectStore.
+                    var itemObjectStore = db.transaction("groc3", "readwrite").objectStore("groc3");
+                    itemData.forEach(function(item) {
+                      console.log(item);
+                      itemObjectStore.add(item);
+                    });
+                  };
+                };
+                request.onsuccess = event => {
+                    console.log('success');
+                    db = event.target.result;
+
+                    var objectStore = db.transaction("groc3").objectStore("groc3");
+        var names = [];
+
+        objectStore.openCursor().onsuccess = event => {
+            var cursor = event.target.result;
+            if (cursor) {
+                // console.log("Name for SSN " + cursor.key + " is " + cursor.value.name);
+                names.push(cursor.value);
+                cursor.continue();
+            }
+            else {
+                console.log(names);
+                // callback(names);
+
+                // console.log("No more entries!");
+            }
+        };
+                }
+
+
+            }
+        </script>
+
+    </body>
+</html>
